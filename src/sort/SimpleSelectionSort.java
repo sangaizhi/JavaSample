@@ -1,7 +1,7 @@
-package algorithm.sort;
+package sort;
 
 /**
- * ¼òµ¥Ñ¡ÔñÅÅÐò
+ * ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
  * @author saz
  *
@@ -23,7 +23,7 @@ public class SimpleSelectionSort {
 
 	public static void sort(int[] a) {
 		for (int i = 0; i < a.length; i++) {
-			int k = i; // ×îÐ¡ÖµµÄÏÂ±ê
+			int k = i; // ï¿½ï¿½Ð¡Öµï¿½ï¿½ï¿½Â±ï¿½
 			for (int j = i + 1; j < a.length; j++) {
 				if (a[k] > a[j]) {
 					k = j;

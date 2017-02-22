@@ -1,7 +1,7 @@
-package algorithm.sort;
+package sort;
 
 /**
- * Ï£¶û²åÈëÅÅÐò
+ * Ï£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author saz
  *
  */
@@ -9,10 +9,10 @@ public class ShellSort {
 	  public static void main(String[] args) {  
 	        int a[] = {3,1,5,7,2,4,9,6,10,8};    
 	        ShellSort obj = new ShellSort();  
-	        System.out.println("³õÊ¼Öµ£º");  
+	        System.out.println("ï¿½ï¿½Ê¼Öµï¿½ï¿½");  
 	        obj.print(a);  
 	        obj.shellSort(a);  
-	        System.out.println("\nÅÅÐòºó£º");  
+	        System.out.println("\nï¿½ï¿½ï¿½ï¿½ï¿½");  
 	        obj.print(a);  
 	  
 	    }  
@@ -23,16 +23,16 @@ public class ShellSort {
 	            dk = dk/2;  
 	         }  
 	    }  
-	    private void ShellInsertSort(int[] a, int dk) {//ÀàËÆ²åÈëÅÅÐò£¬Ö»ÊÇ²åÈëÅÅÐòÔöÁ¿ÊÇ1£¬ÕâÀïÔöÁ¿ÊÇdk,°Ñ1»»³Édk¾Í¿ÉÒÔÁË  
+	    private void ShellInsertSort(int[] a, int dk) {//ï¿½ï¿½ï¿½Æ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½Ç²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dk,ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½dkï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½  
 	        for(int i=dk;i<a.length;i++){  
 	            if(a[i]<a[i-dk]){  
 	                int j;  
-	                int x=a[i];//xÎª´ý²åÈëÔªËØ  
+	                int x=a[i];//xÎªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  
 	                a[i]=a[i-dk];  
-	                for(j=i-dk;  j>=0 && x<a[j];j=j-dk){//Í¨¹ýÑ­»·£¬Öð¸öºóÒÆÒ»Î»ÕÒµ½Òª²åÈëµÄÎ»ÖÃ¡£  
+	                for(j=i-dk;  j>=0 && x<a[j];j=j-dk){//Í¨ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»ï¿½Òµï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã¡ï¿½  
 	                    a[j+dk]=a[j];  
 	                }  
-	                a[j+dk]=x;//²åÈë  
+	                a[j+dk]=x;//ï¿½ï¿½ï¿½ï¿½  
 	            }  
 	        }  
 	    }  

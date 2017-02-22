@@ -1,6 +1,6 @@
-package algorithm.sort;
+package sort;
 /**
- * Ö±½Ó²åÈëÅÅÐò
+ * Ö±ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author saz
  */
 public class StraightInsertSort {
@@ -18,14 +18,14 @@ public class StraightInsertSort {
 		System.out.println("");
 	}
 	public static void sort(int[] a) {
-		// °ÑµÚÒ»¸öµ±×öÒÑ¾­ÅÅºÃÐòµÄ
+		// ï¿½Ñµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½
 		for (int i = 1; i < a.length; i++) {
 			if (a[i] < a[i - 1]) {
 				int j;
 				int temp = a[i];
 				a[i] = a[i - 1];
 				for (j = i - 1; j >= 0 && temp < a[j]; j--) {
-					//Í¨¹ýÑ­»·£¬Öð¸öÕÒµ½Òª²åÈëµÄÎ»ÖÃ
+					//Í¨ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 					a[j+1]=a[j];
 				}
 				a[j+1]=temp;

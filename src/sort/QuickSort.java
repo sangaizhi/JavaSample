@@ -4,8 +4,6 @@ package sort;
  * 快速排序
  */
 public class QuickSort {
-
-
     public static void main(String[] args) {
         QuickSort quickSort = new QuickSort();
         int[] a = new int[] {3, 1, 5, 7, 2, 4, 9, 6, 10, 8};
@@ -15,13 +13,11 @@ public class QuickSort {
         quickSort.print(a);
 
     }
-
     private void print(int[] a){
         for(int temp : a) {
             System.out.print(temp + " ");
         }
     }
-
     private  void sort(int[] a,int low, int high) {
         if(low<high){ //如果不加这个判断递归会无法退出导致堆栈溢出异常
             int middle=getMiddle(a,low,high);
@@ -29,7 +25,6 @@ public class QuickSort {
             sort(a,   middle + 1, high);        //递归对高子表递归排序
         }
     }
-
     /**
      * 计算分割数组的标准元素
      * @param a 待分割的数组

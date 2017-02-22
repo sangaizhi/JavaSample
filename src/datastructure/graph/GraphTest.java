@@ -7,7 +7,7 @@ public class GraphTest {
 		Graph graph = new Graph();
 		char[] vertexs = new char[]{'A','B','C','D','E','F','G','H','I'};
 		for(char vertex : vertexs){
-			//²åÈë¶¥µã
+			//æ’å…¥é¡¶ç‚¹
 			graph.addVertex(vertex);
 		}
 		graph.addEdge(0, 1);

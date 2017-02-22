@@ -1,7 +1,7 @@
 package datastructure.queue;
 
 /**
- * Ñ­»·¶ÓÁĞ
+ * å¾ªç¯é˜Ÿåˆ—
  * @author saz
  *
  * @param <E>
@@ -41,7 +41,7 @@ public class CircleQueue<E> {
 
 	public void insert(E element) {
 		if (isFull()) {
-			throw new IndexOutOfBoundsException("¶ÓÁĞÒÑÂú£¡");
+			throw new IndexOutOfBoundsException("é˜Ÿåˆ—å·²æ»¡ï¼");
 		} else {
 			elements[rear] = element;
 			rear = (rear + 1) % capacity;
@@ -58,29 +58,29 @@ public class CircleQueue<E> {
 		}
 	}
 
-	 public String toString(){  
-	        if(isEmpty()){  
-	            return "[]";  
-	        }else{  
-	            //Èç¹ûfront<rear£¬ÄÇÃ´ÓĞĞ§ÔªËØ¾ÍÊÇfrontµ½rearÖ®¼äµÄÔªËØ  
-	            if(front<rear){  
-	                StringBuilder sb=new StringBuilder("[");  
-	                for(int i=front;i<rear;i++){  
-	                    sb.append(elements[i].toString()+",");  
-	                }  
-	                int len=sb.length();  
-	                return sb.delete(len-1, len).append("]").toString();  
-	            }else{ //Èç¹ûfront>=rear,ÄÇÃ´ÓĞĞ§ÔªËØÎªfront->capacityÖ®¼äºÍ0->frontÖ®¼äµÄÔªËØ  
-	                StringBuilder sb=new StringBuilder("[");  
-	                for(int i=front;i<capacity;i++){  
-	                    sb.append(elements[i].toString()+",");  
-	                }  
-	                for(int i=0;i<rear;i++){  
-	                    sb.append(elements[i].toString()+",");  
-	                }  
-	                int len=sb.length();  
-	                return sb.delete(len-1, len).append("]").toString();  
-	            }  
-	        }  
-	    }  
+	public String toString(){
+		if(isEmpty()){
+			return "[]";
+		}else{
+			//å¦‚æœfront<rearï¼Œé‚£ä¹ˆæœ‰æ•ˆå…ƒç´ å°±æ˜¯frontåˆ°rearä¹‹é—´çš„å…ƒç´ 
+			if(front<rear){
+				StringBuilder sb=new StringBuilder("[");
+				for(int i=front;i<rear;i++){
+					sb.append(elements[i].toString()+",");
+				}
+				int len=sb.length();
+				return sb.delete(len-1, len).append("]").toString();
+			}else{ //å¦‚æœfront>=rear,é‚£ä¹ˆæœ‰æ•ˆå…ƒç´ ä¸ºfront->capacityä¹‹é—´å’Œ0->frontä¹‹é—´çš„å…ƒç´ 
+				StringBuilder sb=new StringBuilder("[");
+				for(int i=front;i<capacity;i++){
+					sb.append(elements[i].toString()+",");
+				}
+				for(int i=0;i<rear;i++){
+					sb.append(elements[i].toString()+",");
+				}
+				int len=sb.length();
+				return sb.delete(len-1, len).append("]").toString();
+			}
+		}
+	}
 }

@@ -14,15 +14,15 @@ import datastructure.vertext.Vertex;
 
 
 /**
- * ´æ´¢±ß
- * 
+ * å­˜å‚¨è¾¹
+ *
  * @author saz
  *
  */
 class Edge<E> {
-	// ±ßµÄÆğÊ¼¶¥µã
+	// è¾¹çš„èµ·å§‹é¡¶ç‚¹
 	private Vertex<E> startVertex;
-	// ±ßµÄ½áÊø¶¥µã
+	// è¾¹çš„ç»“æŸé¡¶ç‚¹
 	private Vertex<E> endVertex;
 
 	public Vertex<E> getStartVertex() {
@@ -55,17 +55,17 @@ class Edge<E> {
 
 public class GenericGraph<E> {
 
-	// ¶¥µãÊıÁ¿
+	// é¡¶ç‚¹æ•°é‡
 	private int vertexNum;
 
-	// ¶¥µã¼¯ºÏ
+	// é¡¶ç‚¹é›†åˆ
 	private List<Vertex> vertexList;
 
-	// ±ß¼¯ºÏ
+	// è¾¹é›†åˆ
 	private List<Edge> edges;
-	
+
 	private StackX<Vertex> stack;
-	
+
 	private LinkQueue<Vertex> linkQueue;
 
 	public GenericGraph() {
@@ -75,7 +75,7 @@ public class GenericGraph<E> {
 		stack = new StackX<>();
 		linkQueue = new LinkQueue<Vertex>();
 	}
-	
+
 	public Vertex add(Vertex v) {
 		vertexList.add(vertexNum++, v);
 		return v;
@@ -86,12 +86,12 @@ public class GenericGraph<E> {
 		if (index == -1) {
 			return null;
 		}
-		//ÒÆ³ı¸Ã½Úµã¹ØÁªµÄ±ß
+		//ç§»é™¤è¯¥èŠ‚ç‚¹å…³è”çš„è¾¹
 		List<Edge> vertexEdges = Edge.getEdgeByVertex(edges, v);
 		edges.removeAll(vertexEdges);
 		return vertexList.get(index);
 	}
-	
+
 	public Edge addEdge(Vertex start, Vertex end){
 		Edge edge = new Edge();
 		edge.setStartVertex(start);
@@ -99,15 +99,15 @@ public class GenericGraph<E> {
 		edges.add(edge);
 		return edge;
 	}
-	
+
 	public void displayVertex(Vertex v){
 		System.out.println(v.getValue());
 	}
-	
+
 	@SuppressWarnings("rawtypes")
 	public Vertex getUnVisitedVertexWithVertex(Vertex v){
 		Set<Vertex> adjacentVertexSet = new HashSet<>();
-		//ÕÒ³öËùÓĞÏàÁÚ½Úµã
+		//æ‰¾å‡ºæ‰€æœ‰ç›¸é‚»èŠ‚ç‚¹
 		for(Edge edge : edges){
 			Vertex startV = edge.getStartVertex();
 			Vertex endV = edge.getEndVertex();
@@ -122,9 +122,9 @@ public class GenericGraph<E> {
 		}
 		return null;
 	}
-	
+
 	/**
-	 * Éî¶ÈÓÅÏÈ±éÀú
+	 * æ·±åº¦ä¼˜å…ˆéå†
 	 */
 	@SuppressWarnings("rawtypes")
 	public void deepFirstSearch(){
@@ -132,7 +132,7 @@ public class GenericGraph<E> {
 		displayVertex(vertexList.get(0));
 		stack.push(vertexList.get(0));
 		while(!stack.isEmpty()){
-			// ²éÑ¯ÏàÁÚÎ´±»·ÃÎÊµÄ¶¥µã
+			// æŸ¥è¯¢ç›¸é‚»æœªè¢«è®¿é—®çš„é¡¶ç‚¹
 			Vertex adjacentV = getUnVisitedVertexWithVertex(stack.peek());
 			if(adjacentV == null){
 				stack.pop();
@@ -142,14 +142,14 @@ public class GenericGraph<E> {
 				stack.push(adjacentV);
 			}
 		}
-		
+
 		for (int j = 0; j < vertexNum; j++) {
 			vertexList.get(j).setWasVisited(false);
 		}
 	}
-	
+
 	/**
-	 * ¹ã¶ÈÓÅÏÈ±éÀú
+	 * å¹¿åº¦ä¼˜å…ˆéå†
 	 */
 	@SuppressWarnings("rawtypes")
 	public void broadFirstSearch(){
@@ -169,6 +169,6 @@ public class GenericGraph<E> {
 			vertexList.get(j).setWasVisited(false);
 		}
 	}
-	
-	
+
+
 }

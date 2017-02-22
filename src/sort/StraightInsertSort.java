@@ -1,6 +1,6 @@
 package sort;
 /**
- * ֱ�Ӳ�������
+ * 直接插入排序
  * @author saz
  */
 public class StraightInsertSort {
@@ -18,14 +18,14 @@ public class StraightInsertSort {
 		System.out.println("");
 	}
 	public static void sort(int[] a) {
-		// �ѵ�һ�������Ѿ��ź����
+		// 把第一个当做已经排好序的
 		for (int i = 1; i < a.length; i++) {
 			if (a[i] < a[i - 1]) {
 				int j;
 				int temp = a[i];
 				a[i] = a[i - 1];
 				for (j = i - 1; j >= 0 && temp < a[j]; j--) {
-					//ͨ��ѭ��������ҵ�Ҫ�����λ��
+					//通过循环，逐个找到要插入的位置
 					a[j+1]=a[j];
 				}
 				a[j+1]=temp;

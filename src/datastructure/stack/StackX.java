@@ -1,8 +1,8 @@
 package datastructure.stack;
 
 /**
- * ÊµÏÖÉî¶ÈÓÅÏÈ±éÀúµÄÕ»Àà
- * 
+ * å®ç°æ·±åº¦ä¼˜å…ˆéå†çš„æ ˆç±»
+ *
  * @author saz
  *
  */
@@ -26,7 +26,7 @@ public class StackX<E> {
 	}
 
 	/**
-	 *·µ»Ø×î¶¥ÉÏµÄ½Úµã
+	 *è¿”å›æœ€é¡¶ä¸Šçš„èŠ‚ç‚¹
 	 * @return
 	 */
 	public E peek() {

@@ -5,27 +5,27 @@ import datastructure.stack.StackX;
 import datastructure.vertext.Vertex;
 
 /**
- * Í¼
+ * å›¾
  * @author saz
  *
  */
 public class Graph {
-	// ×î´ó¶¨µãÊı
+	// æœ€å¤§å®šç‚¹æ•°
 	private final int MAX_VERTS = 20;
 
-	// ¶¥µã¼¯ºÏ
+	// é¡¶ç‚¹é›†åˆ
 	private Vertex[] vertexs;
 
-	// ÁÚ½Ó¾ØÕó±íÊ¾Í¼
+	// é‚»æ¥çŸ©é˜µè¡¨ç¤ºå›¾
 	private int[][] adjMat;
 
-	// ¶¥µãÊıÁ¿
+	// é¡¶ç‚¹æ•°é‡
 	private int nVerts;
 
-	// Éî¶ÈÓÅÏÈ±éÀúÊ±´æ´¢ÁÙÊ±Êı¾İ
+	// æ·±åº¦ä¼˜å…ˆéå†æ—¶å­˜å‚¨ä¸´æ—¶æ•°æ®
 	private StackX stackX;
 
-	// ¹ã¶ÈÓÅÏÈ±éÀúÊ±´æ´¢ÁÙÊ±
+	// å¹¿åº¦ä¼˜å…ˆéå†æ—¶å­˜å‚¨ä¸´æ—¶
 	private LinkQueue linkQueue;
 
 	public Graph() {
@@ -42,8 +42,8 @@ public class Graph {
 	}
 
 	/**
-	 * Ôö¼ÓÒ»¸ö¶¥µã
-	 * 
+	 * å¢åŠ ä¸€ä¸ªé¡¶ç‚¹
+	 *
 	 * @param label
 	 */
 	public void addVertex(char label) {
@@ -51,8 +51,8 @@ public class Graph {
 	}
 
 	/**
-	 * Ôö¼ÓÒ»Ìõ±ß
-	 * 
+	 * å¢åŠ ä¸€æ¡è¾¹
+	 *
 	 * @param start
 	 * @param end
 	 */
@@ -62,8 +62,8 @@ public class Graph {
 	}
 
 	/**
-	 * ÏÔÊ¾Ä³¸ö¶¥µã
-	 * 
+	 * æ˜¾ç¤ºæŸä¸ªé¡¶ç‚¹
+	 *
 	 * @param v
 	 */
 	public void displayVertex(int v) {
@@ -71,8 +71,8 @@ public class Graph {
 	}
 
 	/**
-	 * µÃµ½ÓëV¶¥µãÁÚ½ÓÇÒÎ´·ÃÎÊ¹ıµÄ¶¥µã±àºÅ
-	 * 
+	 * å¾—åˆ°ä¸Vé¡¶ç‚¹é‚»æ¥ä¸”æœªè®¿é—®è¿‡çš„é¡¶ç‚¹ç¼–å·
+	 *
 	 * @param v
 	 * @return
 	 */
@@ -86,7 +86,7 @@ public class Graph {
 	}
 
 	/**
-	 * Éî¶ÈÓÅÏÈ±éÀú
+	 * æ·±åº¦ä¼˜å…ˆéå†
 	 */
 	public void deepFirstSearch() {
 		vertexs[0].setWasVisited(true);
@@ -108,7 +108,7 @@ public class Graph {
 	}
 
 	/**
-	 * ¹ã¶ÈÓÅÏÈ±éÀú
+	 * å¹¿åº¦ä¼˜å…ˆéå†
 	 */
 	public void broadFirstSearch() {
 		vertexs[0].setWasVisited(true);

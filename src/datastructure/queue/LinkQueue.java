@@ -1,16 +1,16 @@
 package datastructure.queue;
 
 /**
- * Á´Ê½¶ÓÁĞ
- * 
+ * é“¾å¼é˜Ÿåˆ—
+ *
  * @author saz
  *
  * @param <E>
  */
 public class LinkQueue<E> {
 	/**
-	 * ½ÚµãÀà
-	 * 
+	 * èŠ‚ç‚¹ç±»
+	 *
 	 * @author saz
 	 *
 	 */
@@ -29,17 +29,17 @@ public class LinkQueue<E> {
 		}
 	}
 
-	// ¶ÓÎ²
+	// é˜Ÿå°¾
 	private Node rear;
 
-	// ¶ÓÊ×
+	// é˜Ÿé¦–
 	private Node front;
 
-	// ¶ÓÁĞ³¤¶È
+	// é˜Ÿåˆ—é•¿åº¦
 	private int size = 0;
 
 	/**
-	 * ³õÊ¼»¯Êı¾İ
+	 * åˆå§‹åŒ–æ•°æ®
 	 */
 	public LinkQueue() {
 		Node node = new Node();
@@ -47,8 +47,8 @@ public class LinkQueue<E> {
 	}
 
 	/**
-	 * ½«Ò»¸ö¶ÔÏó×·¼Óµ½¶ÓÁĞÎ²²¿
-	 * 
+	 * å°†ä¸€ä¸ªå¯¹è±¡è¿½åŠ åˆ°é˜Ÿåˆ—å°¾éƒ¨
+	 *
 	 * @param value
 	 */
 	public void insert(E value) {
@@ -59,8 +59,8 @@ public class LinkQueue<E> {
 	}
 
 	/**
-	 * ¶ÓÁĞ¶ÔÍ·³ö¶Ô
-	 * 
+	 * é˜Ÿåˆ—å¯¹å¤´å‡ºå¯¹
+	 *
 	 * @return
 	 */
 	public E remove() {
@@ -78,8 +78,8 @@ public class LinkQueue<E> {
 	}
 
 	/**
-	 * ¶ÓÁĞ´óĞ¡
-	 * 
+	 * é˜Ÿåˆ—å¤§å°
+	 *
 	 * @return
 	 */
 	public int size() {
@@ -87,8 +87,8 @@ public class LinkQueue<E> {
 	}
 
 	/**
-	 * ¶ÓÁĞÊÇ·ñÎª¿Õ
-	 * 
+	 * é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
+	 *
 	 * @return
 	 */
 	public boolean isEmpty() {

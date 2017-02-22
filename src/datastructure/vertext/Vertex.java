@@ -1,7 +1,7 @@
 package datastructure.vertext;
 
 /**
- * ∂•µ„¿‡
+ * È°∂ÁÇπÁ±ª
  * @author saz
  *
  * @param <E>
@@ -13,8 +13,8 @@ public class Vertex<E> {
 	public Vertex() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
+
+
 	public Vertex(E value, boolean wasVisited) {
 		super();
 		this.value = value;
@@ -36,5 +36,5 @@ public class Vertex<E> {
 	public void setWasVisited(boolean wasVisited) {
 		this.wasVisited = wasVisited;
 	}
-	
+
 }

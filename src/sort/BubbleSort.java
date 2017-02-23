@@ -15,7 +15,7 @@ public class BubbleSort
         bubbleSort.print(a);
     }
     
-    private void print(int[] a)
+    public void print(int[] a)
     {
         for (int anA : a)
         {
@@ -26,7 +26,7 @@ public class BubbleSort
     /**
      * 普通冒泡排序
      */
-    private void bubbleSort(int[] a, int n)
+    public void bubbleSort(int[] a, int n)
     {
         for (int i = 0; i < n - 1; ++i)
         {
@@ -48,7 +48,7 @@ public class BubbleSort
      * 设置一标志性变量pos,用于记录每趟排序中最后一次进行交换的位置。
      * 由于pos位置之后的记录均已交换到位,故在进行下一趟排序时只要扫描到pos位置即可。
      */
-    private void bubbleSort1(int[] a, int n)
+    public void bubbleSort1(int[] a, int n)
     {
         int i = n - 1;
         while (i > 0)
@@ -73,7 +73,7 @@ public class BubbleSort
      * 我们考虑利用在每趟排序中进行正向和反向两遍冒泡的方法一次可以得到两个最终值(最大者和最小者) ,
      * 从而使排序趟数几乎减少了一半。
      */
-    private void bubbleSort2(int[] a, int n)
+    public void bubbleSort2(int[] a, int n)
     {
         int low = 0;
         int high = n - 1;

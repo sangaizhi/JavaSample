@@ -1,4 +1,4 @@
-package org.sangaizhi.juc.heima;
+package org.sangaizhi.thread.interview;
 /**
  * 现有程序同时启动了4个线程去调用TestDo.doSome(key, value)方法，由于TestDo.doSome(key, value)方法内的代码是先暂停1秒，然后再输出以秒为单位的当前时间值，所以，会打印出4个相同的时间值，如下所示：
 		4:4:1258199615

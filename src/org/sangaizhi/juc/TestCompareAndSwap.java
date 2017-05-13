@@ -14,7 +14,7 @@
  * 修改人员：
  * 修改说明：
  */
-package org.sangaizhi.juc.autguigu;
+package org.sangaizhi.juc;
 
 /**
  * @name TestCompareAndSwap

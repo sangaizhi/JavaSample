@@ -1,4 +1,4 @@
-package org.sangaizhi.juc.autguigu;
+package org.sangaizhi.juc;
 
 
 

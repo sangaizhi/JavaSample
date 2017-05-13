@@ -14,7 +14,11 @@
  * 修改人员：
  * 修改说明：
  */
-package org.sangaizhi.juc.autguigu;
+package org.sangaizhi.thread;
+
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @name TestProductAndConsume
@@ -42,30 +46,46 @@ public class TestProductAndConsume {
 class Clerk{
     private int product = 0;
 
-    public synchronized void get(){
-        while (product >= 1) {
-            System.out.println("产品已满");
-            try {
-                this.wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+    private Lock lock = new ReentrantLock();
+
+    private Condition condition = lock.newCondition();
+    public  void get(){
+        lock.lock();
+        try {
+            while (product >= 1) {
+                System.out.println("产品已满");
+                try {
+                    condition.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
+            System.out.println(Thread.currentThread().getName()+":"+ ++product);
+            condition.signalAll();
+        }finally {
+            lock.unlock();
         }
-        System.out.println(Thread.currentThread().getName()+":"+ ++product);
-        this.notifyAll();
+
     }
 
-    public synchronized void sale(){
-        while(product <= 0){
-            System.out.println("缺货!");
-            try {
-                this.wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+    public  void sale(){
+        lock.lock();
+        try {
+            while(product <= 0){
+                System.out.println("缺货!");
+                try {
+                    condition.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
+            System.out.println(Thread.currentThread().getName()+":"+ --product);
+            condition.signalAll();
+        }finally {
+            lock.unlock();
         }
-        System.out.println(Thread.currentThread().getName()+":"+ --product);
-        this.notifyAll();
+
+
     }
 }
 

@@ -1,4 +1,4 @@
-package org.sangaizhi.juc.heima;
+package org.sangaizhi.thread.interview;
 
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;

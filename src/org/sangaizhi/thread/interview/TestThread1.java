@@ -1,8 +1,13 @@
-package org.sangaizhi.juc.heima;
+package org.sangaizhi.thread.interview;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * 现有的程序代码模拟产生了16个日志对象，并且需要运行16秒才能打印完这些日志
+ * ，请在程序中增加4个线程去调用parseLog()方法来分头打印这16个日志对象，程序只需要运行4秒即可打印完这些日志对象。
+ * 原始代码如下：
+ */
 public class TestThread1 {
 
 	public static void main(String[] args){

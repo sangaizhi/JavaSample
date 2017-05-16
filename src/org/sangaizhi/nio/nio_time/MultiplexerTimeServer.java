@@ -73,7 +73,6 @@ public class MultiplexerTimeServer implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(stop);
         while (!stop){
             try{
                 // 每隔1s 循环监听是否有就绪的 channel
@@ -144,11 +143,8 @@ public class MultiplexerTimeServer implements Runnable {
                     readBuffer.get(bytes);
 
                     String body = new String(bytes, "UTF-8");
-
                     System.out.println("The time server receive order :" + body);
-
-                    String currentTime = "QUERY TIME ORDER".equals(body) ? Instant.now().toString()+"sangaizhi" : "BAD ORDER";
-
+                    String currentTime = "QUERY TIME ORDER".equals(body) ? Instant.now().toString() : "BAD ORDER";
                     doWrite(socketChannel, currentTime);
                 }else if(readBytes < 0){
                     selectionKey.cancel();

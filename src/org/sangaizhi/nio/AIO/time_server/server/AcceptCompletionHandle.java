@@ -10,6 +10,11 @@ import java.nio.channels.CompletionHandler;
  */
 public class AcceptCompletionHandle implements CompletionHandler<AsynchronousSocketChannel, AsyncTimeServerHandle> {
 
+    /**
+     * 当操作完成时执行
+     * @param result
+     * @param attachment
+     */
     @Override
     public void completed(AsynchronousSocketChannel result, AsyncTimeServerHandle attachment) {
         // 异步接收新的客户端连接

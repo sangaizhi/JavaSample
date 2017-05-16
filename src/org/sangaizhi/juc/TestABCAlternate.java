@@ -30,33 +30,24 @@ public class TestABCAlternate {
 	
 	public static void main(String[] args) {
 		AlterDemo alterDemo = new AlterDemo();
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				for(int i=1;i<=20;i++){
-					alterDemo.loopA(i);
-				}
-			}
-		},"A").start();
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				for(int i=1;i<=20;i++){
-					alterDemo.loopB(i);
-				}
-			}
-		},"B").start();
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				for(int i=1;i<=20;i++){
-					alterDemo.loopC(i);
-				}
-			}
-		},"C").start();
+		new Thread(() -> {
+            // TODO Auto-generated method stub
+            for(int i=1;i<=20;i++){
+                alterDemo.loopA(i);
+            }
+        },"A").start();
+		new Thread(() -> {
+            // TODO Auto-generated method stub
+            for(int i=1;i<=20;i++){
+                alterDemo.loopB(i);
+            }
+        },"B").start();
+		new Thread(() -> {
+            // TODO Auto-generated method stub
+            for(int i=1;i<=20;i++){
+                alterDemo.loopC(i);
+            }
+        },"C").start();
 		
 	}
 }
